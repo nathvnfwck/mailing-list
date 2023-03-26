@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "dev": "tsx src/main/server.ts",
+    "dev:watch": "tsx watch src/main/server.ts",
     "lint": "eslint ./",
     "test": "vitest",
     "test:ci": "vitest run --coverage"
