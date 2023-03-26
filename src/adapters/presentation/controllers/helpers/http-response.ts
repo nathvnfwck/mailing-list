@@ -16,7 +16,18 @@ export const created = (): HttpResponse => ({
   body: undefined
 })
 
+export const notFound = (): HttpResponse => ({
+  statusCode: 204,
+  body: null
+})
+
 export const serverError = (reason: string): HttpResponse => ({
   statusCode: 500,
   body: new ServerError(reason)
+})
+
+export const sendFile = (file: Buffer): HttpResponse => ({
+  statusCode: 200,
+  body: null,
+  file
 })
