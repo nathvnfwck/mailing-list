@@ -1,4 +1,6 @@
-![Logo](https://i.ibb.co/sgbNMDV/8232051640-140bf61c-232d-4fad-b991-0b3615d37c40-1.png)#
+<p align="center">
+  <img src="https://i.ibb.co/sgbNMDV/8232051640-140bf61c-232d-4fad-b991-0b3615d37c40-1.png" alt="mailing list" />
+</p>
 
 This project is a prototype of a "mailing list". Made to register, store and list users (which contains name and email).
 
