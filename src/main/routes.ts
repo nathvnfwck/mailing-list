@@ -1,10 +1,15 @@
 import { Router } from 'express'
 
 import { adaptRoute } from './adapters/express-route-adapter'
-import { makeRegisterUserController } from './factories/register-user'
+import { makeFindAllUsersController } from './factories/controllers/get-users'
+import { makeRegisterUserController } from './factories/controllers/register-user'
+import { makeUserRepository } from './factories/repositories/user-repository'
 
 const router = Router()
 
-router.post('/users', adaptRoute(makeRegisterUserController()))
+const userRepository = makeUserRepository()
+
+router.get('/users', adaptRoute(makeFindAllUsersController(userRepository)))
+router.post('/users', adaptRoute(makeRegisterUserController(userRepository)))
 
 export { router }
